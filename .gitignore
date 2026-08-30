@@ -1,0 +1,64 @@
+# --- Pesi del modello (~140 MB, forniti separatamente su richiesta) ---
+rf-detr/weights.pt
+*.pt
+*.pth
+*.onnx
+
+# --- Video di input ---
+*.MOV
+*.mov
+*.mp4
+*.MP4
+*.avi
+*.AVI
+
+# --- Dataset e frame (forniti/etichettati dall'utente, vedi training/README.md) ---
+data/
+*.roboflow.txt
+
+# --- Credenziali ---
+.env
+
+# --- Output di training ---
+runs/
+checkpoints/
+
+# --- Output della pipeline ---
+rigid_body_output/
+output/
+debug_output/
+debug_all_frames/
+debug_release_frames/
+results.csv
+*_results.csv
+track_viz_*.jpg
+debug_zoom_input_*.jpg
+bullseye.png
+aggregated_bullseye.png
+
+# --- Ambiente virtuale ---
+.venv_ballspin/
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- Editor / OS ---
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+desktop.ini
+test_*/
+test_*/
+boxes_check/

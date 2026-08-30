@@ -1,0 +1,18 @@
+# Dipendenze della sola parte di data-prep e training.
+# Chi vuole solo eseguire l'inferenza non ha bisogno di installarle:
+# per quello basta il requirements.txt nella root.
+#
+#   pip install -r requirements.txt -r training/requirements-training.txt
+
+# Augmentation e preprocessing (training/preprocess_roboflow_replica.py).
+#
+# Il tetto a <2.0 e' prudenziale: la catena di trasformazioni non ha potuto
+# essere eseguita nell'ambiente di sviluppo (PyPI irraggiungibile), e in
+# albumentations 2.x alcuni parametri usati qui - in particolare `blur_limit` e
+# `sigma_limit` di GaussianBlur - hanno cambiato nome o semantica. Se collaudi
+# lo script sulla 2.x e funziona, alza pure il vincolo.
+albumentations>=1.4.0,<2.0
+
+# Il training usa rfdetr, opencv, numpy e tqdm, gia' presenti nel
+# requirements.txt della root.
+tensorboard>=2.14.0

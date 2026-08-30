@@ -1,0 +1,22 @@
+# Dipendenze verificate sugli import reali del codice.
+# Il modello e' RF-DETR: rfdetr installa a sua volta torch, torchvision e
+# supervision, ma li elenco esplicitamente perche' il codice ci fa affidamento.
+
+# Detector
+rfdetr==1.3.0
+supervision>=0.16.0
+
+# Deep learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Computer vision
+opencv-python>=4.8.0
+Pillow>=10.0.0
+
+# Calcolo scientifico e grafici
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Utilita'
+tqdm==4.67.1
